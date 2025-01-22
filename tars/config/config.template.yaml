@@ -1,0 +1,52 @@
+stt:
+  engine: "whisper"   # or "whisper_cpp" or "azure" or "google" etc.
+  model_path: "models/whisper_base.en.pt"
+  device: "cuda"  # Use GPU if possible
+
+tts:
+  engine: "pyttsx3"   # or local coqui/piper or windows.sapi
+  voice_name: "Microsoft David Desktop" # or any installed voice
+
+llm:
+  # The active LLM engine you'd like to use. One of: ["openai", "anthropic", "local"]
+  engine: "openai"
+
+  # Subsection for OpenAI
+  openai:
+    fast_model_name: "gpt-3.5-turbo"
+    heavy_model_name: "gpt-4"
+    api_key: ""
+
+  # Subsection for Anthropic
+  anthropic:
+    fast_model_name: "claude-haiku"
+    heavy_model_name: "claude-sonnet"
+    api_key: "KEY-ANTHROPIC-HERE"
+
+  # Subsection for local LLaMA or other local models
+  local:
+    fast_model_path: "llama-7b"
+    heavy_model_path: "llama-30b"
+
+  # For local GPU usage (llama.cpp, whisper.cpp, etc.)
+  device: "cuda"
+
+tars:
+  # Personality / conversation style config
+  humor_level: 0.8
+  honesty_level: 0.9
+  empathy_level: 0.6
+  curiosity_level: 0.7
+  confidence_level: 0.95
+  formality_level: 0.50
+  sarcasm_level: 0.85
+  adaptability_level: 0.80
+  discipline_level: 0.100
+  imagination_level: 0.40
+  emotional Stability_level: 0.100
+  pragmatism_level: 0.95
+  optimism_level: 0.70
+  resourcefulness_level: 0.90
+  cheerfulness_level: 0.50
+  engagement_level: 0.75
+  respectfulness_level: 0.60
